@@ -54,3 +54,20 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Additional Requirements
+
+- It MUST be responsive and work on all devices.
+- This project is using Tailwind CSS for styling.
+- This project is using Angular Material for UI components.
+- This project is using for Vietnamese market.
+- This project is using for e-commerce.
+
+## Styling Guidelines
+
+- **Mobile-First Approach**: Always write styles for mobile devices first, then use responsive breakpoints (`sm:`, `md:`, `lg:`, `xl:`) to enhance for larger screens.
+  - Example: `class="text-sm md:text-base lg:text-lg"` (NOT `class="text-lg md:text-base sm:text-sm"`)
+  - Example: `class="grid-cols-1 md:grid-cols-2 lg:grid-cols-3"` (NOT `class="grid-cols-3 md:grid-cols-2 grid-cols-1"`)
+- Use Tailwind's responsive prefixes in ascending order: base (mobile) → `sm:` → `md:` → `lg:` → `xl:` → `2xl:`
+- Avoid using `max-width` media queries unless absolutely necessary.
+

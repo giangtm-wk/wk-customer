@@ -1,0 +1,55 @@
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+@use '@angular/material' as mat;
+
+html {
+  // Define a dark theme for the application
+  @include mat.theme((color: (theme-type: dark,
+        primary: mat.$azure-palette,
+        tertiary: mat.$violet-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    ));
+}
+
+body {
+  // Set dark color scheme
+  color-scheme: dark;
+
+  // Use Material's dark theme system variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin
+  margin: 0;
+}
+
+// Custom overrides for better integration with the app's dark theme
+.mat-mdc-form-field {
+
+  // Make form fields blend with dark background
+  .mat-mdc-text-field-wrapper {
+    background-color: rgba(255, 255, 255, 0.05) !important;
+  }
+
+  // Adjust outline colors for dark theme
+  .mat-mdc-form-field-focus-overlay {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
+
+// Ensure snackbar works well with dark theme
+.mat-mdc-snack-bar-container {
+  &.bg-green-600 {
+    --mdc-snackbar-container-color: rgb(22 163 74);
+    --mdc-snackbar-supporting-text-color: white;
+  }
+
+  &.bg-gray-800 {
+    --mdc-snackbar-container-color: rgb(31 41 55);
+    --mdc-snackbar-supporting-text-color: white;
+  }
+}

@@ -54,3 +54,11 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Additional Requirements
+
+- It MUST be responsive and work on all devices.
+- This project is using Tailwind CSS for styling.
+- This project is using Angular Material for UI components.
+- This project is using for Vietnamese market.
+- This project is using for e-commerce.
